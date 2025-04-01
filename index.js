@@ -28,6 +28,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get('/about', (req, res) => {
+  // Send the home page (about.html) as a response
+  res.sendFile(path.join(__dirname, 'about.html'));
+});
+
 // Define a route for the register page
 app.get('/register', (req, res) => {
   // Send the register page (register.html) as a response
@@ -90,8 +95,6 @@ app.get('/home', function(req, res) {
     res.send('Please login to view this page!');
   }
 });
-
-
 
 
 

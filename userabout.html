@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CutOffChecker helps students check college cut offs, marks, and available branches easily.">
+  <title>About - CutOffChecker</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Font Awesome CDN for GitHub Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Font Style */
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Navbar Styling */
+    .navbar {
+      background-color: #1a1a3d;
+      padding: 0px;
+    }
+    .navbar-brand {
+      font-size: 24px;
+      color: #ffcc00 !important;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 18px;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    .nav-link.active, .navbar-nav .nav-link:hover {
+      color: #ffcc00 !important;
+    }
+
+    .navbar-brand img {
+      width: 300px;
+      height: auto;
+      margin-left: -60px;
+      max-height: 60px;
+    }
+
+    /* About Section */
+    .about-section {
+      padding: 50px 0;
+      background-color: #f8f9fa;
+      text-align: center;
+    }
+
+    .about-section h1 {
+      font-size: 30px;
+      color: #1a1a3d;font-style: bold;
+      margin-bottom: 30px;
+    }
+
+    /* Developer Images */
+   /* Developer Images */
+.developer-boxes {
+  display: flex;
+  justify-content: space-evenly; /* Ensures even spacing between boxes */
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.developer-box {
+  background: #fff;
+  border-radius: 8px;
+  width: 230px; /* Adjust the width to make them closer */
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0px; /* Add a small margin to reduce space between them */
+}
+
+.developer-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+    .developer-box img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .developer-box h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    /* About Us Box */
+    .about-us-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .about-us-left {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .about-us-left h2 {
+      font-size: 28px;
+      color: #1a1a3d;
+      margin-bottom: 15px;
+    }
+
+    .about-us-left p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .about-us-right {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .about-us-right img {
+      width: 500px;
+      height: 200px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #ffcc00;
+      color: #1a1a3d;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 10px;
+    }
+
+    .footer p {
+      font-size: 18px;
+    }
+
+    .footer a {
+      text-decoration: none;
+      color: #1a1a3d;
+      font-size: 18px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .footer .github-icon {
+      font-size: 18px;
+      margin-right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="CutOffChecker"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link active" href="/index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/userabout">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="/getAllinfo">Get College</a></li>
+              <li class="nav-item"><a class="nav-link" href="/">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+  <div class="about-section">
+    <h1>Developed By</h1>
+    
+    <!-- Developer Images Section -->
+    <div class="developer-boxes">
+      <div class="developer-box">
+        <img src="/images/dev.jpg" alt="Anushree">
+        <h3>Anushree Gattani</h3>
+      </div>
+      <div class="developer-box">
+        <img src="/images/dev.jpg" alt="Dhanshree">
+        <h3>Dhanshree Borde</h3>
+      </div>
+      <div class="developer-box">
+        <img src="/images/dev.jpg" alt="Siddhi">
+        <h3>Siddhi Borse</h3>
+      </div>
+    </div>
+
+    <!-- About Us Section in a Box -->
+    <div class="about-us-box">
+      <div class="about-us-left">
+        <h2>About Us</h2>
+        <p>
+          CutOffChecker is a web platform designed to help students easily access the cutoff marks for various colleges. It helps students check college cutoffs, marks, and available branches, enabling them to make informed decisions about their college applications.
+        </p>
+      </div>
+      <div class="about-us-right">
+        <img src="/images/workvector.png" alt="Vector">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 CutOffChecker. All Rights Reserved.
+    <a href="https://github.com/adgattani/CutOffChecker.git" target="_blank" class="github-icon">
+      <i class="fab fa-github"></i> GitHub
+    </a></p>
+  </div>
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
