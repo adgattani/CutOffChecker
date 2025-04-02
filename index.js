@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 // });
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+// const session = require('express-session');
 app.set('view engine', 'ejs');
 app.use(session({
   secret: 'secret_key',
@@ -27,12 +27,24 @@ app.get('/', (req, res) => {
   // Send the home page (index.html) as a response
   res.sendFile(path.join(__dirname, 'index.html'));
 });
+app.get('/index', (req, res) => {
+  // Send the home page (index.html) as a response
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+app.get('/home1', (req, res) => {
+  // Send the home page (index.html) as a response
+  res.render('home1');
+});
+
+app.get('/userabout', (req, res) => {
+  // Send the home page (about.html) as a response
+  res.sendFile(path.join(__dirname, 'userabout.html'));
+});
 
 app.get('/about', (req, res) => {
   // Send the home page (about.html) as a response
   res.sendFile(path.join(__dirname, 'about.html'));
 });
-
 // Define a route for the register page
 app.get('/register', (req, res) => {
   // Send the register page (register.html) as a response
@@ -77,6 +89,7 @@ app.post('/login1', function(req, res) {
               // Set session variable to indicate login
               req.session.loggedin = true;
               req.session.username = results[0].username;
+              // req.session.user={username};
               // Redirect to the home page
               res.redirect('/home');
           } else {
@@ -95,6 +108,15 @@ app.get('/home', function(req, res) {
     res.send('Please login to view this page!');
   }
 });
+
+// app.get('/home', function(req, res) {
+//   if (req.session.user) {
+//     // Pass the username to the EJS template
+//     res.render('home', { username: req.session.user.username });
+//   } else {
+//     res.send('Please login to view this page!');
+//   }
+// });
 
 
 

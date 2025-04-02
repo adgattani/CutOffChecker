@@ -3,8 +3,8 @@ var con=mysql.createConnection(
     {
         host:"localhost",
         user:"root",
-        password:"root",
-        database:"cutoffchecker"
+        password:"borse@7121",
+        database:"cutoffuser"
     }
 );
 
