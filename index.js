@@ -53,7 +53,7 @@ app.post('/register',function(req,res)
 
     
     if(error) throw error;
-    res.send('Student Register successfull');});
+    res.send('Student Register successfull');  });
 
 });
 
